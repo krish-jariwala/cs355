@@ -17,3 +17,9 @@ function markCompleted(checkbox) {
     taskItem.classList.remove("completed");
   }
 }
+
+const $ = document.querySelector.bind(document);
+
+ fetch('/hits')
+ .then(r=>r.text())
+ .then(txt=>$('#hits').innerText = txt);
